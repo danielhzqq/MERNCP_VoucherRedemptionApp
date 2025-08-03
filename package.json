@@ -1,0 +1,13 @@
+{
+  "name": "voucher-redeem-merncp-migration",
+  "version": "1.0.0",
+  "description": "Migration scripts for voucher redemption system",
+  "main": "update-user-roles.js",
+  "scripts": {
+    "migrate": "node update-user-roles.js"
+  },
+  "dependencies": {
+    "mongoose": "^8.17.0",
+    "bcryptjs": "^3.0.2"
+  }
+} 

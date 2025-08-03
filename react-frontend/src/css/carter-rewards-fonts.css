@@ -1,0 +1,85 @@
+/* CarterRewards Cursive Font Styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Playfair+Display:ital@0;1&display=swap');
+
+/* CarterRewards Logo Font Classes */
+.carter-rewards-logo {
+  font-family: 'Dancing Script', cursive, 'Brush Script MT', 'Lucida Handwriting', serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #dc2626; /* Red color */
+}
+
+.carter-rewards-logo-elegant {
+  font-family: 'Great Vibes', cursive, 'Brush Script MT', 'Lucida Handwriting', serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #dc2626;
+}
+
+.carter-rewards-logo-classic {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-style: italic;
+  color: #dc2626;
+}
+
+/* Fallback cursive styling */
+.carter-rewards-cursive {
+  font-family: cursive, 'Brush Script MT', 'Lucida Handwriting', serif;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Responsive font sizes */
+.carter-rewards-logo-small {
+  font-size: 1rem;
+}
+
+.carter-rewards-logo-medium {
+  font-size: 1.5rem;
+}
+
+.carter-rewards-logo-large {
+  font-size: 2rem;
+}
+
+.carter-rewards-logo-xlarge {
+  font-size: 3rem;
+}
+
+/* Hover effects */
+.carter-rewards-logo:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Animation for logo */
+@keyframes carter-rewards-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carter-rewards-logo-animate {
+  animation: carter-rewards-fade-in 0.5s ease-out;
+}
+
+/* Print styles */
+@media print {
+  .carter-rewards-logo {
+    color: #000 !important;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .carter-rewards-logo {
+    color: #f87171; /* Lighter red for dark mode */
+  }
+} 

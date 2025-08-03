@@ -1,0 +1,288 @@
+/* Customer Dashboard Styles */
+:root {
+  --background-color: #f8fafc;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --primary-color: #3b82f6;
+  --secondary-color: #e5e7eb;
+}
+
+/* Force black text for voucher titles and headings */
+h1.text-black,
+h3.text-black {
+  color: black !important;
+}
+
+/* Line Clamp Utilities */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* Redeemed Vouchers Section Enhancements */
+.redeemed-voucher-item {
+  transition: all 0.2s ease-in-out;
+}
+
+.redeemed-voucher-item:hover {
+  background-color: #f9fafb;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.voucher-image {
+  transition: transform 0.2s ease-in-out;
+}
+
+.redeemed-voucher-item:hover .voucher-image {
+  transform: scale(1.05);
+}
+
+/* Status Badge Enhancements */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+.status-badge:hover {
+  transform: scale(1.05);
+}
+
+/* Action Button Enhancements */
+.action-button {
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.action-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.action-button:active {
+  transform: translateY(0);
+}
+
+/* Grid Layout Improvements */
+.voucher-grid {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1024px) {
+  .voucher-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .voucher-grid {
+    gap: 0.75rem;
+  }
+}
+
+/* Odometer Animation */
+.odometer {
+  display: flex;
+  align-items: center;
+}
+
+.odometer-digit {
+  display: inline-block;
+  width: 0.6em;
+  height: 1.2em;
+  overflow: hidden;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  margin: 0 2px;
+}
+
+.odometer-digit-inner {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease-out;
+}
+
+.odometer-digit-inner span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.2em;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.odometer-finish .odometer-digit-inner {
+  transition: none;
+}
+
+/* Button Styles */
+.button_primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: black;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.button_primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.button_primary:active {
+  transform: translateY(0);
+}
+
+.button_secondary {
+  background: white;
+  color: #6b7280;
+  padding: 12px 24px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button_secondary:hover {
+  border-color: #667eea;
+  color: #667eea;
+  transform: translateY(-1px);
+}
+
+/* Input Styles */
+.input {
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  background: white;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .odometer {
+    font-size: 2.5rem;
+  }
+  
+  .odometer-digit {
+    width: 0.5em;
+    height: 1em;
+  }
+  
+  .odometer-digit-inner span {
+    height: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .odometer {
+    font-size: 2rem;
+  }
+  
+  .odometer-digit {
+    width: 0.4em;
+    height: 0.8em;
+  }
+  
+  .odometer-digit-inner span {
+    height: 0.8em;
+  }
+}
+
+/* Custom Scrollbar */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 6px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Card Hover Effects */
+.transform {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transform:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading States */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Animation Classes */
+.scalein {
+  animation: scaleIn 0.3s ease-out;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animation-ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+
+.animation-duration-1000 {
+  animation-duration: 1000ms;
+} 

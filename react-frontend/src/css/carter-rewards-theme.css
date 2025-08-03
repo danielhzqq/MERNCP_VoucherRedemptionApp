@@ -1,0 +1,467 @@
+/* CarterRewards Theme - Red Color Scheme */
+
+/* CSS Custom Properties (Variables) for consistent theming */
+:root {
+  /* Primary Brand Colors */
+  --carter-rewards-primary: #dc2626;
+  --carter-rewards-primary-light: #ef4444;
+  --carter-rewards-primary-dark: #b91c1c;
+  --carter-rewards-primary-lighter: #fecaca;
+  --carter-rewards-primary-darker: #991b1b;
+  
+  /* Secondary Colors */
+  --carter-rewards-secondary: #fef2f2;
+  --carter-rewards-accent: #fee2e2;
+  --carter-rewards-highlight: #fecaca;
+  
+  /* Text Colors */
+  --carter-rewards-text-primary: #1f2937;
+  --carter-rewards-text-secondary: #6b7280;
+  --carter-rewards-text-light: #9ca3af;
+  --carter-rewards-text-on-primary: #ffffff;
+  
+  /* Background Colors */
+  --carter-rewards-bg-primary: #ffffff;
+  --carter-rewards-bg-secondary: #f9fafb;
+  --carter-rewards-bg-accent: #fef2f2;
+  --carter-rewards-bg-gradient: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  
+  /* Border Colors */
+  --carter-rewards-border: #e5e7eb;
+  --carter-rewards-border-primary: #dc2626;
+  --carter-rewards-border-light: #fecaca;
+  
+  /* Status Colors */
+  --carter-rewards-success: #10b981;
+  --carter-rewards-warning: #f59e0b;
+  --carter-rewards-error: #ef4444;
+  --carter-rewards-info: #3b82f6;
+  
+  /* Shadow Colors */
+  --carter-rewards-shadow: rgba(220, 38, 38, 0.1);
+  --carter-rewards-shadow-lg: rgba(220, 38, 38, 0.15);
+}
+
+/* Text Utilities for Mobile Responsiveness */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* Scrollbar Hiding for Mobile */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+/* Global Theme Overrides */
+
+/* Primary Buttons */
+.btn-primary,
+.p-button.p-button-primary,
+.p-button:not(.p-button-secondary):not(.p-button-success):not(.p-button-info):not(.p-button-warning):not(.p-button-help):not(.p-button-danger) {
+  background-color: var(--carter-rewards-primary) !important;
+  border-color: var(--carter-rewards-primary) !important;
+  color: var(--carter-rewards-text-on-primary) !important;
+}
+
+.btn-primary:hover,
+.p-button.p-button-primary:hover,
+.p-button:not(.p-button-secondary):not(.p-button-success):not(.p-button-info):not(.p-button-warning):not(.p-button-help):not(.p-button-danger):hover {
+  background-color: var(--carter-rewards-primary-dark) !important;
+  border-color: var(--carter-rewards-primary-dark) !important;
+}
+
+/* Secondary Buttons */
+.btn-secondary,
+.p-button.p-button-secondary {
+  background-color: var(--carter-rewards-secondary) !important;
+  border-color: var(--carter-rewards-primary) !important;
+  color: var(--carter-rewards-primary) !important;
+}
+
+.btn-secondary:hover,
+.p-button.p-button-secondary:hover {
+  background-color: var(--carter-rewards-accent) !important;
+  border-color: var(--carter-rewards-primary-dark) !important;
+  color: var(--carter-rewards-primary-dark) !important;
+}
+
+/* Links */
+a,
+.p-link {
+  color: var(--carter-rewards-primary) !important;
+}
+
+a:hover,
+.p-link:hover {
+  color: var(--carter-rewards-primary-dark) !important;
+}
+
+/* Form Elements */
+.p-inputtext:focus,
+.p-inputtext:enabled:focus,
+.p-password:not(.p-disabled):focus,
+.p-inputnumber:not(.p-disabled):focus,
+.p-calendar:not(.p-disabled):focus,
+.p-dropdown:not(.p-disabled):focus,
+.p-multiselect:not(.p-disabled):focus,
+.p-autocomplete:not(.p-disabled):focus,
+.p-chips:not(.p-disabled):focus {
+  border-color: var(--carter-rewards-primary) !important;
+  box-shadow: 0 0 0 0.2rem var(--carter-rewards-shadow) !important;
+}
+
+/* Checkboxes and Radio Buttons */
+.p-checkbox .p-checkbox-box.p-highlight,
+.p-checkbox .p-checkbox-box.p-highlight:hover,
+.p-radiobutton .p-radiobutton-box.p-highlight,
+.p-radiobutton .p-radiobutton-box.p-highlight:hover {
+  border-color: var(--carter-rewards-primary) !important;
+  background-color: var(--carter-rewards-primary) !important;
+}
+
+/* Cards */
+.p-card {
+  border-color: var(--carter-rewards-border) !important;
+  box-shadow: 0 1px 3px 0 var(--carter-rewards-shadow) !important;
+}
+
+.p-card:hover {
+  box-shadow: 0 4px 6px -1px var(--carter-rewards-shadow-lg) !important;
+}
+
+/* Navigation */
+.p-menubar,
+.p-tabmenu .p-tabmenu-nav,
+.p-tabview .p-tabview-nav {
+  background-color: var(--carter-rewards-bg-primary) !important;
+  border-color: var(--carter-rewards-border) !important;
+}
+
+.p-menubar .p-menuitem-link:not(.p-disabled):hover,
+.p-tabmenu .p-tabmenu-nav .p-tabmenu-item .p-menuitem-link:not(.p-disabled):hover,
+.p-tabview .p-tabview-nav .p-tabview-item .p-menuitem-link:not(.p-disabled):hover {
+  background-color: var(--carter-rewards-accent) !important;
+  color: var(--carter-rewards-primary) !important;
+}
+
+.p-menubar .p-menuitem-link:not(.p-disabled):focus,
+.p-tabmenu .p-tabmenu-nav .p-tabmenu-item .p-menuitem-link:not(.p-disabled):focus,
+.p-tabview .p-tabview-nav .p-tabview-item .p-menuitem-link:not(.p-disabled):focus {
+  background-color: var(--carter-rewards-highlight) !important;
+  color: var(--carter-rewards-primary) !important;
+}
+
+/* Active States */
+.p-menubar .p-menuitem-link.p-highlight,
+.p-tabmenu .p-tabmenu-nav .p-tabmenu-item.p-highlight .p-menuitem-link,
+.p-tabview .p-tabview-nav .p-tabview-item.p-highlight .p-menuitem-link {
+  background-color: var(--carter-rewards-primary) !important;
+  color: var(--carter-rewards-text-on-primary) !important;
+}
+
+/* Data Tables */
+.p-datatable .p-datatable-header {
+  background-color: var(--carter-rewards-bg-secondary) !important;
+  border-color: var(--carter-rewards-border) !important;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  background-color: var(--carter-rewards-accent) !important;
+  border-color: var(--carter-rewards-border) !important;
+  color: var(--carter-rewards-text-primary) !important;
+}
+
+.p-datatable .p-datatable-tbody > tr:hover {
+  background-color: var(--carter-rewards-secondary) !important;
+}
+
+.p-datatable .p-datatable-tbody > tr.p-highlight {
+  background-color: var(--carter-rewards-highlight) !important;
+  color: var(--carter-rewards-primary) !important;
+}
+
+/* Pagination */
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background-color: var(--carter-rewards-primary) !important;
+  color: var(--carter-rewards-text-on-primary) !important;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page:not(.p-highlight):hover {
+  background-color: var(--carter-rewards-accent) !important;
+  color: var(--carter-rewards-primary) !important;
+}
+
+/* Messages and Alerts */
+.p-message.p-message-info {
+  background-color: var(--carter-rewards-accent) !important;
+  border-color: var(--carter-rewards-primary) !important;
+  color: var(--carter-rewards-primary) !important;
+}
+
+.p-message.p-message-success {
+  background-color: #d1fae5 !important;
+  border-color: var(--carter-rewards-success) !important;
+  color: var(--carter-rewards-success) !important;
+}
+
+.p-message.p-message-warn {
+  background-color: #fef3c7 !important;
+  border-color: var(--carter-rewards-warning) !important;
+  color: var(--carter-rewards-warning) !important;
+}
+
+.p-message.p-message-error {
+  background-color: #fee2e2 !important;
+  border-color: var(--carter-rewards-error) !important;
+  color: var(--carter-rewards-error) !important;
+}
+
+/* Progress Bars */
+.p-progressbar .p-progressbar-value {
+  background-color: var(--carter-rewards-primary) !important;
+}
+
+/* Loading Spinners */
+.p-progress-spinner .p-progress-spinner-circle {
+  stroke: var(--carter-rewards-primary) !important;
+}
+
+/* Tooltips */
+.p-tooltip .p-tooltip-text {
+  background-color: var(--carter-rewards-primary) !important;
+  color: var(--carter-rewards-text-on-primary) !important;
+}
+
+/* Dropdowns */
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item:hover {
+  background-color: var(--carter-rewards-accent) !important;
+  color: var(--carter-rewards-primary) !important;
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+  background-color: var(--carter-rewards-primary) !important;
+  color: var(--carter-rewards-text-on-primary) !important;
+}
+
+/* Modal Dialogs */
+.p-dialog .p-dialog-header {
+  background-color: var(--carter-rewards-bg-secondary) !important;
+  border-bottom-color: var(--carter-rewards-border) !important;
+}
+
+.p-dialog .p-dialog-footer {
+  background-color: var(--carter-rewards-bg-secondary) !important;
+  border-top-color: var(--carter-rewards-border) !important;
+}
+
+/* Sidebar */
+.p-sidebar .p-sidebar-header {
+  background-color: var(--carter-rewards-bg-secondary) !important;
+  border-bottom-color: var(--carter-rewards-border) !important;
+}
+
+/* Custom Components */
+
+/* Header Styling */
+.app-header,
+.layout-topbar {
+  background-color: var(--carter-rewards-bg-primary) !important;
+  border-bottom: 2px solid var(--carter-rewards-primary) !important;
+  box-shadow: 0 2px 4px var(--carter-rewards-shadow) !important;
+}
+
+/* Customer Header */
+.customer-header {
+  background-color: var(--carter-rewards-bg-primary) !important;
+  border-bottom: 1px solid var(--carter-rewards-border) !important;
+}
+
+/* Navigation Links */
+.nav-link,
+.navigation-link {
+  color: var(--carter-rewards-text-secondary) !important;
+  transition: color 0.2s ease-in-out !important;
+}
+
+.nav-link:hover,
+.navigation-link:hover {
+  color: var(--carter-rewards-primary) !important;
+}
+
+.nav-link.active,
+.navigation-link.active {
+  color: var(--carter-rewards-primary) !important;
+  font-weight: 600 !important;
+}
+
+/* Cart Icon */
+.cart-icon {
+  color: var(--carter-rewards-primary) !important;
+}
+
+.cart-icon:hover {
+  color: var(--carter-rewards-primary-dark) !important;
+}
+
+/* Voucher Cards */
+.voucher-card {
+  border: 1px solid var(--carter-rewards-border) !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.voucher-card:hover {
+  border-color: var(--carter-rewards-primary) !important;
+  box-shadow: 0 4px 12px var(--carter-rewards-shadow-lg) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Price Tags */
+.price-tag,
+.voucher-price {
+  color: var(--carter-rewards-primary) !important;
+  font-weight: 600 !important;
+}
+
+/* Status Badges */
+.status-badge {
+  background-color: var(--carter-rewards-accent) !important;
+  color: var(--carter-rewards-primary) !important;
+  border: 1px solid var(--carter-rewards-primary) !important;
+}
+
+/* Background Gradients */
+.bg-gradient-primary {
+  background: var(--carter-rewards-bg-gradient) !important;
+}
+
+.bg-gradient-hero {
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 50%, #fecaca 100%) !important;
+}
+
+/* Text Colors */
+.text-primary {
+  color: var(--carter-rewards-primary) !important;
+}
+
+.text-primary-light {
+  color: var(--carter-rewards-primary-light) !important;
+}
+
+.text-primary-dark {
+  color: var(--carter-rewards-primary-dark) !important;
+}
+
+/* Border Colors */
+.border-primary {
+  border-color: var(--carter-rewards-primary) !important;
+}
+
+.border-primary-light {
+  border-color: var(--carter-rewards-primary-light) !important;
+}
+
+/* Background Colors */
+.bg-primary {
+  background-color: var(--carter-rewards-primary) !important;
+}
+
+.bg-primary-light {
+  background-color: var(--carter-rewards-primary-light) !important;
+}
+
+.bg-primary-lighter {
+  background-color: var(--carter-rewards-primary-lighter) !important;
+}
+
+.bg-accent {
+  background-color: var(--carter-rewards-accent) !important;
+}
+
+.bg-secondary {
+  background-color: var(--carter-rewards-secondary) !important;
+}
+
+/* Focus States */
+.focus-primary:focus {
+  border-color: var(--carter-rewards-primary) !important;
+  box-shadow: 0 0 0 0.2rem var(--carter-rewards-shadow) !important;
+}
+
+/* Hover Effects */
+.hover-primary:hover {
+  background-color: var(--carter-rewards-primary) !important;
+  color: var(--carter-rewards-text-on-primary) !important;
+}
+
+.hover-primary-light:hover {
+  background-color: var(--carter-rewards-accent) !important;
+  color: var(--carter-rewards-primary) !important;
+}
+
+/* Animation Classes */
+.pulse-primary {
+  animation: pulse-primary 2s infinite;
+}
+
+@keyframes pulse-primary {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mobile-primary-bg {
+    background-color: var(--carter-rewards-bg-gradient) !important;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --carter-rewards-primary: #f87171;
+    --carter-rewards-primary-light: #fca5a5;
+    --carter-rewards-primary-dark: #ef4444;
+    --carter-rewards-bg-primary: #1f2937;
+    --carter-rewards-bg-secondary: #374151;
+    --carter-rewards-text-primary: #f9fafb;
+    --carter-rewards-text-secondary: #d1d5db;
+    --carter-rewards-border: #4b5563;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .print-primary {
+    color: #000 !important;
+  }
+  
+  .print-primary-bg {
+    background-color: #fff !important;
+  }
+} 
